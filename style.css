@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle, #0f2027, #000);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.game {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #00aaff;
+    font-size: 2.5rem;
+}
+
+#thun {
+    width: 260px;
+    max-width: 70vw;
+    transition: transform 0.15s;
+}
+
+.info {
+    font-size: 1.2rem;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00aaff, #0066ff);
+    color: white;
+}
+
+button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+/* POPUP */
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 30px #00aaff;
+}
+
+.hidden {
+    display: none;
+}
+/* FRAME */
+.frame {
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+    background: #000;
+    border: 3px solid #00aaff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,170,255,0.6);
+}
+
+/* THUN CONTENT (LOCKED SIZE) */
+#thun {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top, #00aaff, #003366);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+/* OPEN STATE (still safe) */
+#thun.open {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #00ffff;
+}
+

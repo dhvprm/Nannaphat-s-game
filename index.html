@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feed Thun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game">
+    <h1>Feed Thun ⚡</h1>
+
+    <img id="thun" src="thunclose.jpg" alt="Thun">
+
+    <div class="info">
+        <p>⏱ Time: <span id="time">15</span>s</p>
+        <p>Score: <span id="score">0</span></p>
+        <p>High Score: <span id="highScore">0</span></p>
+    </div>
+
+    <button id="feedBtn">FEED ⚡</button>
+</div>
+
+<div class="frame">
+    <img id="thun" src="images/thunclose.jpg">
+</div>
+ 
+
+
+<div id="popup" class="popup hidden">
+    <div class="popup-box">
+        <h2 id="popupText"></h2>
+        <button onclick="restartGame()">Restart</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
